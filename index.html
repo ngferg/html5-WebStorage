@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<Title>HTML file</title>
+		<Title>HTML WebStorage</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function(){
+				p1();
+			});
+
+			function sub(){
+				localStorage.setItem("subbed", "true");
+				localStorage.setItem("name", $("#name").val());
+				p1();
+			}
+
+			function unSub(){
+				localStorage.setItem("subbed", "false");
+				p1();
+			}
+
+			function p1(){
+				if(localStorage.getItem("subbed") == "true"){
+					console.log("true");
+					$("#box").html(
+						"<p>Your name is " + localStorage.getItem("name") +"</p>" +
+						"<p><button type='button' onclick='unSub()'>Change name</button></p>"
+					);
+				} else {
+					console.log("false");
+					$("#box").html(
+						//"<form action='#'>" +
+						"<p>Enter your name: <input type='text' id='name'></p>" +
+						"<p><button type='button' onclick='sub()'>Enter</button></p>" //+
+						//"</form>"
+					);
+				}
+			}
+		</script>
 	</head>
 
 	<body>
-		<h1>Test</h1>
+		<div id="box">
+			<p>Enter your name: <input type="text" id="name"></p>
+			<p><button type="button" onclick="sub()">Enter</button></p>
+		</div>
 	</body>
 </html>
