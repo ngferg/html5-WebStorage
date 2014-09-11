@@ -6,6 +6,11 @@
 		<script>
 			$(function(){
 				p1();
+				if(localStorage.getItem("visited") != 1){
+					localStorage.setItem("visited", 1);
+					localStorage.setItem("firstVisited", Date());
+				}
+				$("#when").html(localStorage.getItem("firstVisited"));
 			});
 
 			function sub(){
@@ -38,6 +43,8 @@
 	</head>
 
 	<body>
+		<h3>You first visited this page on <span id="when"></span>
+		<noscript>Please turn on javascript</noscript>.</h3>
 		<div id="box">
 			<p>Enter your name: <input type="text" id="name"></p>
 			<p><button type="button" onclick="sub()">Enter</button></p>
