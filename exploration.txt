@@ -1,7 +1,4 @@
-source(s):
-
-
-code:
-
+sources:	w3schools http://www.w3schools.com/html/html5_webstorage.asp
+		Wikipedia http://en.wikipedia.org/wiki/Web_storage
 
 recap:  What I learned, etc.
