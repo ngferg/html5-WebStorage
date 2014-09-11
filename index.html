@@ -21,13 +21,13 @@
 
 			function p1(){
 				if(localStorage.getItem("subbed") == "true"){
-					console.log("true");
+					//console.log("true");
 					$("#box").html(
 						"<p>Your name is " + localStorage.getItem("name") +"</p>" +
 						"<p><button type='button' onclick='unSub()'>Change name</button></p>"
 					);
 				} else {
-					console.log("false");
+					//console.log("false");
 					$("#box").html(
 						//"<form action='#'>" +
 						"<p>Enter your name: <input type='text' id='name'></p>" +
