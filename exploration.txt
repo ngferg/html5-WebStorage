@@ -5,4 +5,9 @@ sources:	w3schools http://www.w3schools.com/html/html5_webstorage.asp
 github link:	https://github.com/fergBurglerr/html5-WebStorage
 
 
-recap:  What I learned, etc.
+recap:		html5 web storage is an alerternative to cookies for storings
+user data.  It has some pros and cons in relation to cookies.
+
+		pros:	faster
+			can store larger files
+		cons:	no serverside access to local storage
